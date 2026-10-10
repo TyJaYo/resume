@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+<resume>
+    <contact>
+        <name>Tyler James Young</name>
+        <desc>Technologist Translator</desc>
+    </contact>
+    
+    <experience>
+        <company>
+            <name>BenchPrep</name>
+            <desc>Learning products built and served for partner <en-us>organizations</en-us><en-gb>organisations</en-gb> on a home-grown platform</desc>
+            <duration start="2015-11-02" end="2026-10-31">Nov 2015 - Oct 2026</duration>
+            
+            <role>
+                <duration start="2025-10-01" end="2026-10-31">Oct 2025 - Oct 2026</duration>
+                <title>Technical Product Owner</title>
+                <duty>Worked with two engineering teams to define and <en-us>prioritize</en-us><en-gb>prioritise</en-gb> roadmap initiatives and customer-funded features</duty>
+                <brag>Developed AI workflows/heuristics for automated drafting of release notes, knowledge base articles, and internal documentation</brag>
+            </role>
+            
+            <role>
+                <duration start="2022-01-05" end="2025-10-01">Jan 2022 - Oct 2025</duration>
+                <title>Software Engineer</title>
+                <duty>Full-stack development of features for web application, admin dashboards, and analytics services</duty>
+                <brag>Completed several Ruby and Vue courses, recruited internally and ascended quickly</brag>
+            </role>
+            
+            <role>
+                <duration start="2015-11-02" end="2022-01-05">Nov 2015 - Jan 2022</duration>
+                <title>Manager, Learning Technology &amp; Innovation, Learning Design &amp; Strategy Team</title>
+                <duty>Led a team of 6 web designers to process and style incoming content in many forms from many types of sources</duty>
+                <brag>Developed take-home exercises for hiring and automated <en-us>normalization</en-us><en-gb>normalisation</en-gb>/ingestion processes still in use today</brag>
+            </role>
+        </company>
+
+        <company>
+            <name>HERE, a Nokia company</name>
+            <desc>Marketing/e-commerce for map data products such as in-dash navigation</desc>
+            <duration start="2011-07-01" end="2015-06-30">Jul 2011 - Jun 2015</duration>
+            
+            <role>
+                <duration start="2011-07-01" end="2015-06-30">Jul 2011 - Jun 2015</duration>
+                <title>Senior UX Designer</title>
+                <duty>Designed e-commerce microsites and authored thought leadership pieces for navigation.com</duty>
+                <brag>Taught myself PHP to manage lightweight server-side A/B testing of landing pages</brag>
+            </role>
+        </company>
+
+        <company>
+            <name>AdYatra</name>
+            <desc>Digital agency with a focus on ads, marketing, and SEO</desc>
+            <duration start="2008-12-01" end="2011-07-31">Dec 2008 - Jul 2011</duration>
+            
+            <role>
+                <duration start="2008-12-01" end="2011-07-31">Dec 2008 - Jul 2011</duration>
+                <title>Copy Director</title>
+                <duty>Final edit on all customer-facing communication and product copy</duty>
+                <brag>Managed a large, multidisciplinary production team in New Delhi</brag>
+            </role>
+        </company>
+    </experience>
+</resume>
