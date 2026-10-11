@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://w3.org">
+    <xsl:output method="html" encoding="UTF-8" indent="yes"/>
     
     <xsl:template match="/resume">
         <html lang="en">
@@ -21,7 +22,6 @@
                 .company-block { margin-bottom: 30px; }
                 .company-header { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid #eee; padding-bottom: 4px; margin-bottom: 10px; }
                 .company-name { font-size: 1.25rem; font-weight: bold; margin: 0; }
-                .company-desc { font-style: italic; color: #666; margin-top: 0; margin-bottom: 15px; font-size: 0.95rem; }
                 
                 .job { margin-left: 5px; border-left: 3px solid #0066cc; padding-left: 15px; margin-bottom: 20px; }
                 .job-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 5px; }
@@ -36,8 +36,8 @@
             
             <div class="controls">
                 <span>Region Config:</span>
-                <button id="btn-us" class="active" onclick="setRegion('us')">🇺🇸</button>
-                <button id="btn-uk" onclick="setRegion('uk')">🇬🇧</button>
+                <button id="btn-us" class="active" onclick="setRegion('us')">🇺🇸 US (MM/YYYY)</button>
+                <button id="btn-uk" onclick="setRegion('uk')">🇬🇧 UK (DD/MM/YYYY)</button>
             </div>
 
             <header style="margin-bottom: 25px;">
@@ -46,6 +46,7 @@
             </header>
 
             <section>
+                <h2>Experience</h2>
                 <xsl:for-each select="experience/company">
                     <div class="company-block">
                         <div class="company-header">
@@ -54,7 +55,7 @@
                                 <xsl:value-of select="duration"/>
                             </span>
                         </div>
-                        <p class="company-desc">
+                        <p style="font-style: italic; color: #666; margin-top: 0; margin-bottom: 15px; font-size: 0.95rem;">
                             <xsl:copy-of select="desc/node() | desc/text()"/>
                         </p>
                         
@@ -66,7 +67,7 @@
                                         <xsl:value-of select="duration"/>
                                     </span>
                                 </div>
-                                <p class="duty">💡 <xsl:copy-of select="duty/node() | duty/text()"/></p>
+                                <p>💡 <xsl:copy-of select="duty/node() | duty/text()"/></p>
                                 <p class="brag">🏆 <xsl:copy-of select="brag/node() | brag/text()"/></p>
                             </div>
                         </xsl:for-each>
@@ -75,24 +76,21 @@
             </section>
 
             <script>
-                // Map months out to clean abbreviations if text rendering is preferred later
-                const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-
                 function parseAndFormatDate(isoString, region) {
                     if (!isoString) return "Present";
-                    const [year, month, day] = isoString.split('-');
+                    const parts = isoString.split('-');
+                    const year = parts[0];
+                    const month = parts[1];
+                    const day = parts[2] || "01";
                     
                     if (region === 'us') {
-                        // US Format: MM/YYYY
-                        return `${month}/${year}`;
+                        return month + "/" + year;
                     } else {
-                        // UK Format: DD/MM/YYYY
-                        return `${day}/${month}/${year}`;
+                        return day + "/" + month + "/" + year;
                     }
                 }
 
                 function setRegion(region) {
-                    // 1. Swap word spelling classes via CSS
                     if (region === 'us') {
                         document.body.className = 'lang-us';
                         document.getElementById('btn-us').className = 'active';
@@ -103,20 +101,18 @@
                         document.getElementById('btn-us').className = '';
                     }
 
-                    // 2. Loop through and reformat all timelines simultaneously
-                    document.querySelectorAll('.duration').forEach(el => {
+                    document.querySelectorAll('.duration').forEach(function(el) {
                         const startRaw = el.getAttribute('data-start');
                         const endRaw = el.getAttribute('data-end');
                         
                         const formattedStart = parseAndFormatDate(startRaw, region);
                         const formattedEnd = parseAndFormatDate(endRaw, region);
                         
-                        el.textContent = `${formattedStart} — ${formattedEnd}`;
+                        el.textContent = formattedStart + " — " + formattedEnd;
                     });
                 }
 
-                // Initial pass on document load
-                window.onload = () => setRegion('us');
+                window.onload = function() { setRegion('us'); };
             </script>
         </body>
         </html>
