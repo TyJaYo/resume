@@ -114,6 +114,7 @@
             </section>
 
             <script>
+                <![CDATA[
                 function parseAndFormatDate(isoString, region) {
                     if (!isoString) return "Present";
                     
@@ -130,15 +131,18 @@
                 }
 
                 function setRegion(region) {
-                    // Update state classes
+                    var candidateName = document.querySelector('.main-name').textContent;
+
                     if (region === 'us') {
                         document.body.className = 'lang-us';
                         document.getElementById('btn-us').className = 'active';
                         document.getElementById('btn-uk').className = '';
+                        document.title = candidateName + " - Resume"; 
                     } else {
                         document.body.className = 'lang-uk';
                         document.getElementById('btn-uk').className = 'active';
                         document.getElementById('btn-us').className = '';
+                        document.title = candidateName + " - CV"; 
                     }
 
                     var elements = document.querySelectorAll('.duration');
@@ -157,6 +161,7 @@
                 window.onload = function() { 
                     setRegion('us'); 
                 };
+                ]]>
             </script>
         </body>
         </html>
