@@ -9,7 +9,7 @@
                 <title><xsl:value-of select="contact/name" /> - Resume</title>
                 <style>
                 body { 
-                    font-family: sans-serif; 
+                    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Segoe UI Emoji", sans-serif;
                     max-width: 615px; 
                     margin: 40px auto; 
                     padding: 0 20px; 
@@ -56,7 +56,7 @@
                 
                 .job { margin-left: 5px; border-left: 3px solid #0066cc; padding-left: 15px; margin-bottom: 20px; }
                 .job-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
-                .role-title { font-weight: 600; font-size: 1.05rem; margin: 0; color: #222; }
+                .role-title { font-weight: 600; font-size: 1.05rem; margin: 0 4px 0 0; color: #222; }
                 .duration { font-size: 0.85rem; color: #666; font-variant-numeric: tabular-nums; white-space: nowrap; font-weight: 500; }
                 ul, li { margin: 0 }
                 li { margin-bottom: 4px; max-width: 520px }
