@@ -9,7 +9,7 @@
                 <title><xsl:value-of select="contact/name" /> - Resume</title>
                 <style>
                 body { 
-                    font-family: system-ui, -apple-system, sans-serif; 
+                    font-family: sans-serif; 
                     max-width: 615px; 
                     margin: 40px auto; 
                     padding: 0 20px; 
