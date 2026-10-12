@@ -59,7 +59,7 @@
                 .job-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
                 .role-title { font-weight: 600; font-size: 1.05rem; margin: 0 4px 0 0; color: #222; }
                 .duration { font-size: 0.85rem; color: #666; font-variant-numeric: tabular-nums; white-space: nowrap; font-weight: 500; }
-                ul, li { margin: 0 }
+                ul, li { margin: 0; list-style-type: square }
                 li { margin-bottom: 4px; max-width: 520px }
                 .duty, .brag { color: #444; }
             </style>
