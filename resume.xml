@@ -36,7 +36,7 @@
 
         <company>
             <name>HERE, a Nokia company</name>
-            <desc>Marketing/e-commerce for map data products such as in-dash navigation</desc>
+            <desc>Marketing/e-commerce for map data products such as in-dash <en-us>GPS</en-us><en-gb>sat nav</en-gb> updates</desc>
             <duration start="2011-07-01" end="2015-06-30">Jul 2011 - Jun 2015</duration>
             
             <role>
