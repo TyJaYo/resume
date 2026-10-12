@@ -10,10 +10,10 @@
         <company>
             <name>BenchPrep</name>
             <desc>Learning products built and served for partner <en-us>organizations</en-us><en-gb>organisations</en-gb> on a home-grown platform</desc>
-            <duration start="2015-11-02" end="2026-10-31">Nov 2015 - Oct 2026</duration>
+            <duration start="2015-11-02" end="2026-09-30">Nov 2015 - Oct 2026</duration>
             
             <role>
-                <duration start="2025-10-01" end="2026-10-31">Oct 2025 - Oct 2026</duration>
+                <duration start="2025-10-01" end="2026-09-30">Oct 2025 - Oct 2026</duration>
                 <title>Technical Product Owner</title>
                 <duty>Worked with two engineering teams to define and <en-us>prioritize</en-us><en-gb>prioritise</en-gb> roadmap initiatives and customer-funded features</duty>
                 <brag>Developed AI workflows/heuristics for automated drafting of release notes, knowledge base articles, and internal documentation</brag>
