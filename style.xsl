@@ -62,6 +62,12 @@
                 ul, li { margin: 0; list-style-type: square }
                 li { margin-bottom: 4px; max-width: 520px }
                 .duty, .brag { color: #444; }
+
+                @media print {
+                    .controls, .company-block:last-child {
+                        display: none !important;
+                    }
+                }
             </style>
             </head>
             <body class="lang-us">
@@ -71,7 +77,10 @@
                         <img src="https://flagcdn.com/20x15/us.png" srcset="https://flagcdn.com/40x30/us.png 2x, https://flagcdn.com/60x45/us.png 3x" alt="United States"/>
                     </button>
                     <button id="btn-uk" onclick="setRegion('uk')">
-                        <img src="https://flagcdn.com/20x15/gb.png" srcset="https://flagcdn.com/40x30/gb.png 2x, https://flagcdn.com/60x45/gb.png 3x" alt="United States"/>
+                        <img src="https://flagcdn.com/20x15/gb.png" srcset="https://flagcdn.com/40x30/gb.png 2x, https://flagcdn.com/60x45/gb.png 3x" alt="United Kingdom"/>
+                    </button>
+                    <button id="btn-print" onclick="window.print()" title="Print Resume">
+                        🖨️
                     </button>
                 </div>
 
