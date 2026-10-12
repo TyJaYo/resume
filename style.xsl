@@ -6,6 +6,7 @@
         <html lang="en">
             <head>
                 <meta charset="UTF-8" />
+                <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
                 <title><xsl:value-of select="contact/name" /> - Resume</title>
                 <style>
                 body { 
