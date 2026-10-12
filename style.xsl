@@ -6,7 +6,6 @@
         <html lang="en">
             <head>
                 <meta charset="UTF-8" />
-                <link id="dynamic-favicon" rel="icon" type="image/png" src="https://flagcdn.com/16x12/us.png"/>
                 <title><xsl:value-of select="contact/name" /> - Resume</title>
                 <style>
                 body { 
@@ -148,12 +147,12 @@
                         document.body.className = 'lang-us';
                         document.getElementById('btn-us').className = 'active';
                         document.getElementById('btn-uk').className = '';
-                        document.title = candidateName + " - Resume"; 
+                        document.title = candidateName + " - Resume";
                     } else {
                         document.body.className = 'lang-uk';
                         document.getElementById('btn-uk').className = 'active';
                         document.getElementById('btn-us').className = '';
-                        document.title = candidateName + " - CV"; 
+                        document.title = candidateName + " - CV";
                     }
 
                     var elements = document.querySelectorAll('.duration');
