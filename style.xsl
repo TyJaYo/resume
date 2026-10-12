@@ -6,6 +6,7 @@
         <html lang="en">
             <head>
                 <meta charset="UTF-8" />
+                <link id="dynamic-favicon" rel="icon" type="image/png" src="https://flagcdn.com/16x12/us.png"/>
                 <title><xsl:value-of select="contact/name" /> - Resume</title>
                 <style>
                 body { 
