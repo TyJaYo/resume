@@ -25,7 +25,7 @@
                 }
                 button { 
                     cursor: pointer; 
-                    padding: 0 4px; 
+                    padding: 4px 8px; 
                     font-size: 1.5rem; 
                     border: 1px solid white; 
                     border-radius: 50%; 
@@ -66,8 +66,12 @@
             <body class="lang-us">
 
                 <div class="controls">
-                    <button id="btn-us" class="active" onclick="setRegion('us')">🇺🇸</button>
-                    <button id="btn-uk" onclick="setRegion('uk')">🇬🇧</button>
+                    <button id="btn-us" class="active" onclick="setRegion('us')">
+                        <img src="https://flagcdn.com/20x15/us.png" srcset="https://flagcdn.com/40x30/us.png 2x, https://flagcdn.com/60x45/us.png 3x" alt="United States"/>
+                    </button>
+                    <button id="btn-uk" onclick="setRegion('uk')">
+                        <img src="https://flagcdn.com/20x15/gb.png" srcset="https://flagcdn.com/40x30/gb.png 2x, https://flagcdn.com/60x45/gb.png 3x" alt="United States"/>
+                    </button>
                 </div>
 
                 <header class="main-header">
